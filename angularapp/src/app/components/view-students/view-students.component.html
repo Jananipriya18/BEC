@@ -1,0 +1,14 @@
+<div class="paymentcontainer">
+    <!-- <button class="dashboard" (click)="goToDashboard()">Back to Dashboard</button> -->
+    <h2>Registered Students</h2>
+  <table>
+    <tr>
+      <th>User Name</th>
+      <th>Email</th>
+    </tr>
+    <tr *ngFor="let student of students">
+      <td>{{ student.userName }}</td>
+      <td>{{ student.email }}</td>
+    </tr>
+  </table>
+  </div>

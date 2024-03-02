@@ -1,0 +1,111 @@
+/* Apply some basic styles to the table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  /* Style the table header */
+  thead {
+    background-color: #3498db; /* Header background color */
+    color: #fff; /* Header text color */
+  }
+  
+  /* Style the table cells */
+  td, th {
+    border: 1px solid #ddd; /* Border color for cells */
+    padding: 8px;
+    text-align: left;
+  }
+  
+  /* Style alternating rows for better readability */
+  tbody tr:nth-child(even) {
+    background-color: #f2f2f2; /* Alternate row background color */
+  }
+  
+  /* Style buttons */
+  button {
+    padding: 5px 10px;
+    margin: 2px;
+    cursor: pointer;
+    background-color: #4caf50; /* Green */
+    color: white;
+    border: none;
+    border-radius: 3px;
+  }
+  
+  button:hover {
+    background-color: #45a049; /* Darker green on hover */
+  }
+  
+  /* Adjust styles based on user role */
+  button[disabled] {
+    background-color: #ccc; /* Gray out disabled buttons */
+    cursor: not-allowed;
+  }
+  /* Style for the main container */
+/* div {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  } */
+  
+  /* Style for the main heading */
+  .main-head {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Style for the table */
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 17px;
+    text-align: center;
+  }
+  
+  /* Style for table header */
+  .table th {
+    background-color: #f2f2f2;
+    padding: 12px;
+    border: 1px solid #ddd;
+  }
+  
+  /* Style for table rows */
+  .table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+  }
+  
+  /* Style for alternating row colors */
+  .table tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .buttons{
+    display:flex !important;
+  }
+
+  /* Style for buttons */
+  .buttons button {
+    margin-right: 5px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width:100px
+  }
+  
+  /* Style for Edit button */
+  .edit-btn-grad {
+    background-color: #4caf50;
+    color: #fff;
+  }
+  
+  /* Style for Delete button */
+  .delete-btn-grad {
+    background-color: #dc3545;
+    color: #fff;
+  }
+  

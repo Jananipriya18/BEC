@@ -1,0 +1,21 @@
+<!-- dashboard.component.html -->
+
+<div class="card-container">
+  <div class="card" style="background-color: #87ceeb" routerLink="/course/add">
+    <li><a  *ngIf="isAdmin">Add Course</a></li>
+  </div>
+
+  <div class="card" style="background-color: #98fb98"  routerLink="/courses/view">
+    <li><a *ngIf="isAdmin">View Courses</a></li>
+  </div>
+  <div class="card" style="background-color: #fbf11d" routerLink="/enquiry/view">
+    <li><a  *ngIf="isAdmin">View Enquiries</a></li>
+  </div>
+
+  <div class="card" style="background-color: #dda0dd" routerLink="/payments/view">
+    <li><a  *ngIf="isAdmin">View Payment</a></li>
+  </div>
+  <div class="card" style="background-color: #83b98b" routerLink="/students/view">
+    <li><a  *ngIf="isAdmin">View Students</a></li>
+  </div>
+</div>

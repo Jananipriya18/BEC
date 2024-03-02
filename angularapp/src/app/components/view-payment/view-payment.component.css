@@ -1,0 +1,43 @@
+/* Add your specific styles for the payment container */
+.paymentcontainer {
+  max-width: 800px; /* Adjust the maximum width according to your layout */
+  margin: 0 auto; /* Center the container horizontally */
+  padding: 20px;
+}
+
+h2{
+    text-align: center;
+}
+
+/* Style for the payment history table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background-color: #4caf50; /* Green background color */
+  color: white; /* White text color */
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* Optional: Add hover effect for better user experience */
+tr:hover {
+  background-color: #e6e6e6;
+}
+
+/* Optional: Add some spacing between table rows for better readability */
+tr:not(:first-child) {
+  margin-top: 5px;
+}

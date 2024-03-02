@@ -1,0 +1,38 @@
+<!-- userpayment.component.html -->
+<h2>Make Payment</h2>
+<form (ngSubmit)="openConfirmation()" #paymentForm="ngForm">
+  <label for="userName">User Name:</label>
+  <input id="userName" type="text" name="userName" [(ngModel)]="paymentData.userName" readonly>
+
+  <!-- <label for="courseId">Course Id:</label>
+  <input id="courseId" type="number" name="courseId" [(ngModel)]="paymentData.course.courseID" readonly> -->
+  <label for="courseId" readonly [hidden]="!showCourseId">Course Id:</label>
+  <input id="courseId" type="number" name="courseId" [(ngModel)]="paymentData.course.courseID" readonly [hidden]="!showCourseId">
+  
+
+  <label for="totalAmount">Total Amount:</label>
+  <input id="totalAmount" type="number" name="totalAmount" [(ngModel)]="paymentData.totalAmount" readonly>
+
+  <label for="paymentMode">Mode of Payment:</label>
+  <select id="paymentMode" name="modeOfPayment" [(ngModel)]="paymentData.modeOfPayment" required>
+    <option value="">Select a mode of payment</option>
+    <option value="Cash">Cash</option>
+    <option value="UPI">UPI</option>
+    <option value="Card">Card</option>
+    <option value="NetBanking">NetBanking</option>
+  </select>
+
+  <!-- <label for="paymentDate">Payment Date:</label>
+  <input id="paymentDate" type="date" name="paymentDate" [(ngModel)]="paymentData.paymentDate" required> -->
+
+  <input type="date" id="paymentDate"  [(ngModel)]="paymentData.paymentDate" name="paymentDate"[min]="minEnquiryDate()"[max]="maxEnquiryDate()"required>
+  <button type="submit">Submit Payment</button>
+</form>
+
+<div *ngIf="showConfirmation">
+  <div class="confirmation-dialog">
+    <p>Are you sure you want to submit this payment?</p>
+    <button (click)="submitPayment()">Yes</button>
+    <button (click)="closeConfirmation()">No</button>
+  </div>
+</div>

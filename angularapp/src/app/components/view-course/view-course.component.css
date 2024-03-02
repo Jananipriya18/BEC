@@ -1,0 +1,58 @@
+/* Apply some basic styling to the table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  /* Style the table header */
+  thead {
+    background-color: #f2f2f2;
+  }
+  
+  th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+  }
+  
+  /* Style the actions buttons */
+  button {
+    cursor: pointer;
+    padding: 5px 10px;
+    margin-right: 5px;
+    border: none;
+    border-radius: 3px;
+  }
+  
+  /* Define button colors */
+  button.edit-btn {
+    background-color: #4caf50;
+    color: white;
+  }
+  
+  button.delete-btn {
+    background-color: #f44336;
+    color: white;
+  }
+  
+  button.pay-btn {
+    background-color: #2196f3;
+    color: white;
+  }
+  
+  button.save-btn {
+    background-color: #4caf50;
+    color: white;
+  }
+  
+  button.cancel-btn {
+    background-color: #f44336;
+    color: white;
+  }
+  
+  /* Hover effect for buttons */
+  button:hover {
+    opacity: 0.8;
+  }
+  

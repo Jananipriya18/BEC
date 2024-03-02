@@ -1,0 +1,42 @@
+h2 {
+  text-align: center;
+}
+.asterisk{
+  color: #d9534f;
+}
+form {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+}
+
+.error-message {
+  color: #ff0000;
+  /* margin-top: 5px; */
+}
+
+.add-course {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.add-course:disabled {
+  background-color: #ddd;
+  color: #555;
+  cursor: not-allowed;
+}

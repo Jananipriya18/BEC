@@ -1,0 +1,23 @@
+<!-- navbar.component.html -->
+<nav>
+  <div class="container">
+    <div class="logo">
+      BEC Enquiry Management System
+    </div>
+    <ul class="nav-links">
+      <ng-container *ngIf="!isLoggedIn">
+        <li><a routerLink="/signup">Register</a></li>
+        <li><a routerLink="/login">Login</a></li>
+      </ng-container>
+      <ng-container *ngIf="isLoggedIn">
+      <li><a routerLink="/">Home</a></li>
+         <li><a routerLink="/admin/dashboard" *ngIf="isAdmin">Admin</a></li>
+        <li><a routerLink="/student/dashboard" *ngIf="isStudent">Student</a></li>
+        <li><a id="logout" (click)="logout()">Logout</a></li>
+      </ng-container>
+    </ul>
+  </div>
+</nav>
+
+
+

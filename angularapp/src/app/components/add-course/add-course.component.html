@@ -1,0 +1,33 @@
+<h2>Add Course Details</h2>
+<form #courseForm="ngForm" (ngSubmit)="addCourse(courseForm)">
+  <label for="courseName">Course Name<span class="asterisk">*</span>:</label>
+  <input id="courseName" [(ngModel)]="newCourse.courseName" name="courseName" required placeholder="Enter Course Name"
+    #courseName="ngModel">
+  <div *ngIf="courseName.invalid && (courseName.dirty || courseName.touched)" class="error-message">
+    <div *ngIf="courseName.errors.required">*Course Name is required.</div>
+  </div>
+ 
+  <label for="description">Description<span class="asterisk">*</span>:</label>
+  <input id="description" [(ngModel)]="newCourse.description" name="description" required
+    placeholder="Enter Description" #description="ngModel">
+  <div *ngIf="description.invalid && (description.dirty || description.touched)" class="error-message">
+    <div *ngIf="description.errors.required">*Description is required.</div>
+  </div>
+ 
+  <label for="duration">Duration<span class="asterisk">*</span>:</label>
+  <input id="duration" [(ngModel)]="newCourse.duration" name="duration" required placeholder="Enter Duration"
+    #duration="ngModel">
+  <div *ngIf="duration.invalid && (duration.dirty || duration.touched)" class="error-message">
+    <div *ngIf="duration.errors.required">*Duration is required.</div>
+  </div>
+ 
+  <label for="cost">Cost<span class="asterisk">*</span>:</label>
+  <input id="cost" [(ngModel)]="newCourse.cost" name="cost" type="number" required placeholder="Enter Cost"
+    #cost="ngModel">
+  <div *ngIf="cost.invalid && (cost.dirty || cost.touched)" class="error-message">
+    <div *ngIf="cost.errors.required">*Cost is required.</div>
+    <div *ngIf="cost.errors.min">*Cost cannot be negative.</div>
+  </div>
+ 
+  <button type="submit" class="add-course">Add Course</button>
+</form>

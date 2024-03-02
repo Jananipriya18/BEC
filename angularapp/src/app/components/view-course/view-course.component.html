@@ -1,0 +1,40 @@
+<table>
+    <thead>
+      <tr>
+        <th>Course Name</th>
+        <th>Description</th>
+        <th>Duration</th>
+        <th>Cost</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let course of courses">
+        <ng-container *ngIf="selectedCourse !== course; else editMode">
+          <td>{{ course.courseName }}</td>
+          <td>{{ course.description }}</td>
+          <td>{{ course.duration }}</td>
+          <td>{{ course.cost }}</td>
+          <td>
+            <ng-container *ngIf="userRole === 'ADMIN'">
+              <button (click)="editCourse(course)" class="edit-btn">Edit</button>
+              <button (click)="deleteCourse(course)" class="delete-btn">Delete</button>
+            </ng-container>
+            <ng-container *ngIf="userRole === 'STUDENT'">
+              <button (click)="makePayment(course)" class="pay-btn">Make Payment</button>
+            </ng-container>
+          </td>
+        </ng-container>
+        <ng-template #editMode>
+          <td><input [(ngModel)]="course.courseName"></td>
+          <td><input [(ngModel)]="course.description"></td>
+          <td><input [(ngModel)]="course.duration"></td>
+          <td><input [(ngModel)]="course.cost"></td>
+          <td>
+            <button (click)="updateCourse(course)" class="save-btn">Save</button>
+            <button (click)="cancelEdit()" class="cancel-btn">Cancel</button>
+          </td>
+        </ng-template>
+      </tr>
+    </tbody>
+  </table>

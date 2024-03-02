@@ -1,0 +1,37 @@
+<table>
+  <thead>
+    <tr>
+      <!-- <th>User ID</th> -->
+      <th>Course Name</th>
+      <th>Description</th>
+      <th>Email</th>
+      <th>Enquiry Type</th>
+      <th> Student Status</th>
+      <th *ngIf="userRole === 'STUDENT' || userRole === 'ADMIN'">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let enquiry of enquiries">
+      <!-- <td>{{ enquiry.userId }}</td> -->
+      <td>{{ enquiry.title }}</td>
+      <td>{{ enquiry.description }}</td>
+      <td>{{ enquiry.emailID }}</td>
+      <td>{{ enquiry.enquiryType }}</td>
+      <td>{{ enquiry.status }}</td>
+      <td>
+        <div class="dropdown">
+          <ng-container *ngIf="userRole === 'ADMIN'">
+            <select class="form-control" (change)="changeStatus($event.target.value, enquiry)">
+              <option [ngValue]="'ACCEPTED'" [selected]="enquiry.status === 'CLOSED'">Closed</option>
+              <option [ngValue]="'IN_PROGRESS'" [selected]="enquiry.status === 'IN_PROGRESS'">In Progress</option>
+              <option [ngValue]="'PENDING'" [selected]="enquiry.status === 'PENDING'">Pending</option>
+            </select>
+          </ng-container>
+        </div>
+      </td>
+      <td>
+        <button *ngIf="userRole === 'STUDENT'" (click)="deleteEnquiry(enquiry)">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

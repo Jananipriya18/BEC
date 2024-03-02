@@ -1,0 +1,38 @@
+<!-- dashboard.component.html -->
+
+<div class="card-container">
+    
+    <div class="card" style="background-color: #87CEEB;">
+      <!-- <li><a routerLink="/course/add" *ngIf="isAdmin">Add Course</a></li> -->
+      <li><a routerLink="/courses/view" *ngIf="isStudent">View Courses</a></li>
+    </div>
+  
+    <div class="card" style="background-color: #98FB98;">
+        <li><a routerLink="/enquiry/add" *ngIf="isStudent">Add Enquiry</a></li>
+    </div>
+
+    <div class="card" style="background-color: #eb87d0;">
+      <li><a routerLink="/myenquiry/view" *ngIf="isStudent">View Enquiries</a></li>
+    </div>
+
+    <!-- <div class="card" style="background-color: #98FB98;">
+        <li><a routerLink="/payment/make" *ngIf="isStudent">Make Payments</a></li>
+    </div>
+
+    <div class="card" style="background-color: #dda0dd;">
+      <li><a routerLink="/payments/view" *ngIf="isStudent">Payment History</a></li>
+    </div> -->
+  </div>
+  
+    <!-- <li><a routerLink="/jobpostings" *ngIf="isAdmin || isStudent">Job Postings</a></li> -->
+
+      <!-- <li><a routerLink="/applicationform" *ngIf="isAdmin">Applications</a></li> -->
+      <!-- <li><a routerLink="/admin/course" *ngIf="isAdmin">Create Course</a></li>
+      <li><a routerLink="/enquiry" *ngIf="isAdmin">View Enquiry</a></li>
+      <li><a routerLink="/payment" *ngIf="isAdmin">Payment History</a></li>
+      <li><a routerLink="/course" *ngIf="isAdmin">View Courses</a></li>
+      <li><a routerLink="/payment" *ngIf="isAdmin">Make Payment</a></li>
+      <li><a routerLink="/payment" *ngIf="isAdmin">View Payments</a></li>
+
+
+      <li><a id="logout" (click)="logout()">Logout</a></li> -->
